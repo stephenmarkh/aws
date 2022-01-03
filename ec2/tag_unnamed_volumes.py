@@ -31,8 +31,9 @@ def get_name_and_volume_id():
                             vol_id_and_name.update({instance_name:vol_id})
                             vid_name_list.append(vol_id_and_name)
         return vid_name_list
-    except Exception as E:
-        print(E)
+    except Exception as e:
+        logging.exception(e)
+        print(e)
 
 
 def tag_volumes_without_name(vol_id_and_instance_name):

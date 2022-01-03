@@ -41,8 +41,9 @@ def delete_available_volumes(volumes):
         for v in volumes:
             volume = ec2.Volume(str(v))
             volume.delete()
-    except Exception as E:
-        print(E)
+    except Exception as e:
+        logging.exception(e)
+        print(e)
 
 
 if __name__ == '__main__':
