@@ -62,4 +62,5 @@ def tag_volumes_without_name(vol_id_and_instance_name):
         )
 
 
-tag_volumes_without_name(get_name_and_volume_id())
+if __name__ == '__main__':
+    tag_volumes_without_name(get_name_and_volume_id())
