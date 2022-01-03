@@ -45,4 +45,5 @@ def delete_available_volumes(volumes):
         print(E)
 
 
-delete_available_volumes(get_available_volumes())
+if __name__ == '__main__':
+    delete_available_volumes(get_available_volumes())
