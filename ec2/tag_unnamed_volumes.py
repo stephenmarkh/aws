@@ -9,7 +9,7 @@ log.setLevel(logging.INFO)
 def get_name_and_volume_id():
     """
     Generate a dictionary of volume IDs and Name tags
-    :return: Returns vol_id_and_name a dictionary of volume I
+    :return: vid_name_list: List, Returns a list of dictionaries of volume IDs and Instance Names
     """
     try:
         client = boto3.client(
@@ -38,7 +38,7 @@ def get_name_and_volume_id():
 def tag_volumes_without_name(vol_id_and_instance_name):
     """
     Tag EBS volumes that do not have a tag Value for the Name key.
-    :param vol_id_and_instance_name: Dictionary, of inst
+    :param vol_id_and_instance_name: Dictionary, of instance names and volume IDs
     :return: No return value from this function
     """
     ec2 = boto3.resource(
